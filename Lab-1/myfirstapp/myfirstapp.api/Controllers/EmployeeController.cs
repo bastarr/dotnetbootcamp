@@ -26,6 +26,7 @@ namespace myfirstapp.api.Controllers
        [HttpGet]
        public IEnumerable<Employee> Get()
        {
+           _logger.LogInformation("get employees");
            var employees = new List<Employee>();
            var rng = new Random();
            return Enumerable.Range(1, 5).Select(index => {
